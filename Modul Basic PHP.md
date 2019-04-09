@@ -1,8 +1,28 @@
 # Modul Basic PHP
 
+# Apa itu PHP?
+
+PHP adalah singkatan dari (`Hyper Preprocessor`) yaitu sebuah bahasa pemrograman bersifat `open-source` yang secara khusus dibuat untuk keperluan pengembangan web dan juga bisa digabungkan dengan HTML. Namun PHP juga dapat memenuhi kebutuhan lain yang memerlukan scripting, Seperti perhitungan cepat, algoritma dan lainya.
+
+
+
+## Apa yang bisa dilakukan PHP?
+
+Apa pun. PHP utamanya berfokus pada pemrosesan sisi server, sehingga Anda dapat melakukan apa saja yang bisa dilakukan oleh program CGI lainnya, seperti mendapatkan data dari form, menghasilkan konten halaman yang dinamis, atau mengirim dan menerima cookie. Tetapi PHP dapat melakukan lebih banyak lagi.
+
+
+
+### Tiga area utama yang dijangkau oleh PHP
+
+- Pemrosesan pada sisi server. Ini adalah target utama dan paling tradisional untuk PHP. Namun Anda memerlukan tiga hal untuk membuatnya berfungsi: PHP Parser (modul CGI atau server), server web, dan browser web. Anda perlu menjalankan server web, dengan instalasi PHP yang terhubung. Anda dapat mengakses output program PHP dengan browser web, melihat halaman PHP melalui server. Semua ini dapat berjalan di mesin milik anda jika Anda hanya bereksperimen dengan pemrograman PHP. Lihat bagian instruksi instalasi untuk informasi lebih lanjut.
+- Command Line Scripting. Anda dapat membuat skrip PHP untuk menjalankannya tanpa server atau browser apa pun. Anda hanya perlu parser PHP untuk menggunakannya dengan cara ini. Jenis penggunaan ini sangat ideal untuk skrip yang dieksekusi secara teratur menggunakan cron (di * nix atau Linux) atau Penjadwal Tugas (pada Windows). Skrip ini juga dapat digunakan untuk tugas pemrosesan teks sederhana. 
+- Membuat aplikasi desktop. PHP mungkin bukan bahasa terbaik untuk membuat aplikasi desktop dengan user interface grafis yang indah, tetapi jika Anda mengenal PHP dengan baik, dan ingin menggunakan beberapa fitur cangih PHP di aplikasi sisi klien Anda, Anda juga dapat menggunakan PHP-GTK untuk tulis program semacam itu. Anda juga memiliki kemampuan untuk menulis aplikasi lintas platform dengan cara ini. Namun PHP-GTK adalah ekstensi dari PHP, tidak tersedia di distribusi utama. 
+
+
+
 ## Mendefinisikan Variable
 
-
+Variable adalah
 
 ```php
 <?php
@@ -16,6 +36,8 @@
 
 
 ## Mendefinisikan Array
+
+Array adalah 
 
 ```php
 <?php 
