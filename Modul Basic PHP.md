@@ -2,7 +2,7 @@
 
 # Apa itu PHP?
 
-PHP adalah singkatan dari (`Hyper Preprocessor`) yaitu sebuah bahasa pemrograman bersifat `open-source` yang secara khusus dibuat untuk keperluan pengembangan web dan juga bisa digabungkan dengan HTML. Namun PHP juga dapat memenuhi kebutuhan lain yang memerlukan scripting, Seperti perhitungan cepat, algoritma dan lainya.
+PHP adalah singkatan dari (`Hypertext Preprocessor`) yaitu sebuah bahasa pemrograman bersifat `open-source` yang secara khusus dibuat untuk keperluan pengembangan web dan juga bisa digabungkan dengan HTML. Namun PHP juga dapat memenuhi kebutuhan lain yang memerlukan scripting, Seperti perhitungan cepat, algoritma dan lainya.
 
 
 
@@ -69,8 +69,8 @@ Apa itu Case Sensitivity yaitu penulisan huruf kapital atau huruf kecil diartika
 ```php
 <?php 
     $nama = "kucing";
-	$Nama = "Kucing";
-	$NAMA = "KUCING";
+    $Nama = "Kucing";
+    $NAMA = "KUCING";
 ```
 
 Penulisan nama berikut berbeda, Meskipun dibaca sama sama nama, Namun artinya berbeda. 
@@ -82,9 +82,9 @@ Apa itu Case Insensitive yaitu penulisan yang mengabaikan huruf kapital atau lai
 ```php
 <?php 
     echo "Kelinci";
-	Echo "Kelinci";
-	eCho "Kelinci";
-	ECho "Kelinci";
+    Echo "Kelinci";
+    eCho "Kelinci";
+    ECho "Kelinci";
 ```
 
 Penulisan tersebut akan berarti sama karena memang beberapa fungsi di php mengabaikan case sensitive.
@@ -108,7 +108,7 @@ Tipe data adalah sebuah klasifikasi data menurut jenis data tertentu yang dikena
 | Doubles          | Data yang memiliki   titik atau bisa disebut desimal         | 10.1 , 100.222,   3.14                            |
 | Boolean          | Tipe data yang hanya   memiliki isi True/False               | False,True,true,false                             |
 | NULL             | Tipe data yang   menyatakan bahwa data itu tidak ada         | -                                                 |
-| Array            | Sekumupulan data yang   sejenis                              | ['sapi','kucing','kada']                          |
+| Array            | Sekumupulan data yang   sejenis                              | ['sapi','kucing','kuda']                          |
 | Object           | Data pada pemrograman   berbasis object                      | -                                                 |
 | Resources        | Tipe data dari php   saat melakukan handling pada file atau yang lainya | Koneksi DB                                        |
 
@@ -129,23 +129,23 @@ Namun untuk pengenalan basic PHP hanya beberapa tipe data yang digunakan yaitu, 
 ```php
 <?php
     $string = "Nikko Enggaliano";
-	$integer = 17;
-	$float  = 99.9;
-	$boolean = true; 
-	$boolean2 = false;
+    $integer = 17;
+    $float  = 99.9;
+    $boolean = true; 
+    $boolean2 = false;
 ```
 
 
 
 ## Mendefinisikan Array
 
-Array adalah 
+Array adalah suatu jenis tipe data yang bisa menyiman banyak data (baik dengan tipe data yang sejenis maupun berbeda) dalam satu wadah/variabel
 
 ```php
 <?php 
     $array = [1,2,3,4,5,6];
-	$array2 = array(1,2,3,4,5,6);
-	$array3 = array('nama' => 'rotan','harga' => 1000);
+    $array2 = array(1,2,3,4,5,6);
+    $array3 = array('nama' => 'rotan','harga' => 1000);
 ```
 
 
@@ -157,11 +157,11 @@ Array adalah
 ```php
 <?php 
     $nama = "Nikko Enggaliano";
-	echo "Ini adalah sebuah output";
-	echo $nama;
-	echo "Halo nama saya ".$nama;
-	print $nama;
-	print "Haloo Dunia!";
+    echo "Ini adalah sebuah output";
+    echo $nama;
+    echo "Halo nama saya ".$nama;
+    print $nama;
+    print "Haloo Dunia!";
 ```
 
 
@@ -171,25 +171,25 @@ Array adalah
 ```php
 <?php 
     $buah = ['Durian', 'Apel', 'Jeruk'];
-	$hewan = array('Ikan', 'Kucing', 'Nyamuk');
-	$hewan2 = array('nama' => 'Ikan', 'harga' => 1000);
+    $hewan = array('Ikan', 'Kucing', 'Nyamuk');
+    $hewan2 = array('nama' => 'Ikan', 'harga' => 1000);
 
-	print_r($buah);
-	print_r($hewan);
-	print_r($hewan2);
+    print_r($buah);
+    print_r($hewan);
+    print_r($hewan2);
 ```
 
-### Ouput element of array
+### Menampilkan data pada sebuah array dengan menggunakan indeks
 
 ```php
 <?php 
     $buah = ['Durian', 'Apel', 'Jeruk'];
-	$hewan = array('Ikan', 'Kucing', 'Nyamuk');
-	$hewan2 = array('nama' => 'Ikan', 'harga' => 1000);
-	
-	echo $buah[1];
-	echo $hewan[0];
-	echo $hewan2['nama'];
+    $hewan = array('Ikan', 'Kucing', 'Nyamuk');
+    $hewan2 = array('nama' => 'Ikan', 'harga' => 1000);
+    
+    echo $buah[1];
+    echo $hewan[0];
+    echo $hewan2['nama'];
 ```
 
 
@@ -199,32 +199,48 @@ Array adalah
 ### Manipulasi String
 
 #### strtolower
-
+Fungsi ini digunakan untuk mengubah string inputan menjadi huruf kecil
 ```php
 <?php
-$var = "Nikko Enggaliano";
-echo strtolower($var);
-echo strtolower("Nikko Enggaliano");
+    $var = "Nikko Enggaliano";
+    echo strtolower($var);
+    echo strtolower("Nikko Enggaliano");
 ```
 
 #### strtoupper
-
+Fungsi ini digunakan untuk mengubah string inputan menjadi huruf besar
 ```php
 <?php
-
-$var = "Nikko Enggaliano";
-echo strtoupper($var);
-echo strtoupper("Nikko Enggaliano");
+    $var = "Nikko Enggaliano";
+    echo strtoupper($var);
+    echo strtoupper("Nikko Enggaliano");
 ```
 
 #### strlen
-
+Fungsi ini digunakan untuk menghitung jumlah karakter dari string inputan
 ```php
 <?php
     $var = "Nikko";
-echo strlen($var);
-echo strlen("Nikko Enggaliano");
+    echo strlen($var);
+    echo strlen("Nikko Enggaliano");
 ```
+
+#### str_replace
+Fungsi ini digunakan untuk melakukan penggantian karakter/kata pada string inputan
+```php
+<?php
+    $var = "string saya";
+    echo str_replace("saya","kamu",$var);
+```
+
+#### str_repeat
+Fungsi ini digunakan untuk mengulang karakter pada string inputan
+```php
+<?php
+    $var = "php";
+    echo str_repeat($var,5);
+```
+
 
 ### Return Value
 
@@ -290,12 +306,12 @@ echo date("y:Y");
 ```php
 <?php
     $nilai1 = 100;
-	$nilai2 = 1000;
-if($nilai1 > $nilai2){
-    echo $nilai1." Lebih besar!";
-}else{
-    echo $nilai2." Lebih besar!";
-}
+    $nilai2 = 1000;
+    if($nilai1 > $nilai2){
+        echo $nilai1." Lebih besar!";
+    } else{
+        echo $nilai2." Lebih besar!";
+    }
 ```
 
 
@@ -305,14 +321,14 @@ if($nilai1 > $nilai2){
 ```php
 <?php
     $nilai1 = 100;
-	$nilai2 = 1000;
-if($nilai1 > $nilai2){
-    echo $nilai1." Lebih besar!";
-}elseif($nilai1 == $nilai2){
-    echo "Dua nilai sama besar!";
-}else{
-    echo $nilai2." Lebih besar!";
-}
+    $nilai2 = 1000;
+    if($nilai1 > $nilai2){
+        echo $nilai1." Lebih besar!";
+    } elseif($nilai1 == $nilai2){
+        echo "Dua nilai sama besar!";
+    } else{
+        echo $nilai2." Lebih besar!";
+    }
 ```
 
 
@@ -322,17 +338,17 @@ if($nilai1 > $nilai2){
 ```php
 <?php 
     $buah = 'apel';
-switch($buah){
-    case 'jeruk':
-        echo 'Enak';
-        break;
-            case 'apel':
-        echo 'Lezat';
-        break;
-    default:
-        echo 'Hmmm';
-        break;
-}
+    switch($buah){
+        case 'jeruk':
+            echo 'Enak';
+            break;
+                case 'apel':
+            echo 'Lezat';
+            break;
+        default:
+            echo 'Hmmm';
+            break;
+    }
     
 ```
 
@@ -363,9 +379,9 @@ switch($buah){
 ```php
 <?php
     $buah = ['apel', 'jeruk', 'durian'];
-foreach($buah as $isi){
-    echo $isi." ";
-}
+    foreach($buah as $isi){
+        echo $isi." ";
+    }
 ```
 
 
@@ -375,9 +391,9 @@ foreach($buah as $isi){
 ```php
 <?php 
     $hewan = ['kucing', 'kelinci', 'kijang'];
-foreach($hewan as $key => $isi){
-    echo $key."->".$isi." ";
-}
+    foreach($hewan as $key => $isi){
+        echo $key."->".$isi." ";
+    }
 ```
 
 
@@ -387,10 +403,10 @@ foreach($hewan as $key => $isi){
 ```php
 <?php
     $count = 10;
-while($count < 100){
-    echo $count;
-    $count++;
-}
+    while($count < 100){
+        echo $count;
+        $count++;
+    }
 ```
 
 
@@ -400,10 +416,10 @@ while($count < 100){
 ```php
 <?php
     $count= 100;
-while($count > 5){
-    echo $count;
-    $count--;
-}
+    while($count > 5){
+        echo $count;
+        $count--;
+    }
 ```
 
 
@@ -413,10 +429,10 @@ while($count > 5){
 ```php
 <?php
     $count = 100;
-do{
-    echo $count;
-    $count--;
-}while($count > 10);
+    do{
+        echo $count;
+        $count--;
+    }while($count > 10);
 ```
 
 
@@ -428,18 +444,17 @@ do{
 ```php
 <?php
     function tambah($satu,$dua){
-    return ($satu+$dua);
-}
-
-echo tambah(10,10);
+        return ($satu+$dua);
+    }
+    echo tambah(10,10);
 
 ```
 
 ```php
 <?php 
     function kurang($satu,$dua){
-    echo ($satu-$dua);
-}
-kurang(100,125);
+        echo ($satu-$dua);
+    }
+    kurang(100,125);
 ```
 
