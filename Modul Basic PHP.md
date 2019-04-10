@@ -41,11 +41,11 @@ Menulis kode PHP murni bisa menggunakan 3 cara yaitu dengan.
    <?= .... ?>
    ```
 
-  Itu adalah tag alternatife yang digunakan dalam keadaan jika kode php butuh hanya 1 line saja, Artinya kode phpnya sangat simple dan pendek.
+   Itu adalah tag alternatife yang digunakan dalam keadaan jika kode php butuh hanya 1 line saja, Artinya kode phpnya sangat simple dan pendek.
 
 
 
-Sebenarnya ada dua tag lagi yang belum ditulisa, Namun karena tag itu sudah tidak dapat digunakan pada versi PHP (7.x) saat penulis menulis ini, Maka tag tersebut tidak dimasukan.
+Sebenarnya ada dua tag lagi yang belum ditulis, Namun karena tag itu sudah tidak dapat digunakan pada versi PHP (7.x) saat penulis menulis ini, Maka tag tersebut tidak dimasukan.
 
 
 
@@ -95,7 +95,36 @@ Penulisan tersebut akan berarti sama karena memang beberapa fungsi di php mengab
 
 ## Mendefinisikan Variable
 
-Variable adalah
+Variable adalah sebuah tempat untuk menyimpan berbagai tipe data.
+
+### Tipe data
+
+Tipe data adalah sebuah klasifikasi data menurut jenis data tertentu yang dikenal oleh suatu bahasa pemrograman. Berikut contoh tipe data yang dikenal oleh PHP.
+
+| Nama   Tipe Data | Pengertian                                                   | Contoh                                            |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------------- |
+| String           | Adalah semua karakter   pada keyboard                        | [AaBbCcDdEe!@#$%^&*_](mailto:AaBbCcDdEe!@#$%^&*_) |
+| Integer          | Semua angka tanpa   decimal                                  | 1000,10,1,2,34,5,77,1900                          |
+| Doubles          | Data yang memiliki   titik atau bisa disebut desimal         | 10.1 , 100.222,   3.14                            |
+| Boolean          | Tipe data yang hanya   memiliki isi True/False               | False,True,true,false                             |
+| NULL             | Tipe data yang   menyatakan bahwa data itu tidak ada         | -                                                 |
+| Array            | Sekumupulan data yang   sejenis                              | ['sapi','kucing','kada']                          |
+| Object           | Data pada pemrograman   berbasis object                      | -                                                 |
+| Resources        | Tipe data dari php   saat melakukan handling pada file atau yang lainya | Koneksi DB                                        |
+
+Namun untuk pengenalan basic PHP hanya beberapa tipe data yang digunakan yaitu, String,Integer,Double,Boolean,Array selainya tidak akan dipergunakan karena tidak begitu diperlukan.
+
+
+
+### Aturan penulisan variable
+
+1. Variable didefinisikan menggunakan `$` dollar sign.
+2. Variable tidak boleh diawali dengan angka.
+3. Variable boleh diawali dengan underscore `_` 
+4. Variable boleh diawali dengan Huruf kapital atau Huruf kecil
+5. Penulisan variable adalah case sensitive
+
+
 
 ```php
 <?php
