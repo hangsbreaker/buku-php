@@ -18,6 +18,79 @@ Apa pun. PHP utamanya berfokus pada pemrosesan sisi server, sehingga Anda dapat 
 - Command Line Scripting. Anda dapat membuat skrip PHP untuk menjalankannya tanpa server atau browser apa pun. Anda hanya perlu parser PHP untuk menggunakannya dengan cara ini. Jenis penggunaan ini sangat ideal untuk skrip yang dieksekusi secara teratur menggunakan cron (di * nix atau Linux) atau Penjadwal Tugas (pada Windows). Skrip ini juga dapat digunakan untuk tugas pemrosesan teks sederhana. 
 - Membuat aplikasi desktop. PHP mungkin bukan bahasa terbaik untuk membuat aplikasi desktop dengan user interface grafis yang indah, tetapi jika Anda mengenal PHP dengan baik, dan ingin menggunakan beberapa fitur cangih PHP di aplikasi sisi klien Anda, Anda juga dapat menggunakan PHP-GTK untuk tulis program semacam itu. Anda juga memiliki kemampuan untuk menulis aplikasi lintas platform dengan cara ini. Namun PHP-GTK adalah ekstensi dari PHP, tidak tersedia di distribusi utama. 
 
+## Aturan menulis kode PHP
+
+Menulis kode PHP memiliki beberapa aturan, Aturan-aturan ini digunakan dan diimplementasikan pada banyak situasi. Berikut ini beberapa aturan peulisan kode PHP.
+
+### Basic syntax tag php
+
+#### Menulis kode PHP murni
+
+Menulis kode PHP murni bisa menggunakan 3 cara yaitu dengan.
+
+1. Classic tag
+
+   ```php
+   <?php .... ?>
+   ```
+   Itu adalah tag paling basic dan universal yang digunakan untuk menulis kode php.
+
+2. Open tag
+
+  ```php
+  <?= .... ?>
+  ```
+
+  Itu adalah tag alternatife yang digunakan dalam keadaan jika kode php butuh hanya 1 line saja, Artinya kode phpnya sangat simple dan pendek.
+
+
+
+Sebenarnya ada dua tag lagi yang belum ditulisa, Namun karena tag itu sudah tidak dapat digunakan pada versi PHP (7.x) saat penulis menulis ini, Maka tag tersebut tidak dimasukan.
+
+
+
+Menulis tag pembuka php yang pertama `classic tag` biasanya digunakan saat kode php bercampur dengan HTML, atau bahasa pemrograman lainya. Namun jika kode php murni dijalankan tanpa ada campuran dari HTML atau bahasa pemrograman lainya, Maka penulisa kode php cukup seperti ini
+
+```php
+<?php 
+    ...
+    ...
+    ...
+```
+
+
+
+Ditulis tanpa mengunakan penutup `?>` namun jika ingin digunakan penutup juga tidak masalah, Karena ini hanya standarisasi penulisan.
+
+### Case Sensitivity dan Case Insensitive 
+
+Apa itu Case Sensitivity yaitu penulisan huruf kapital atau huruf kecil diartikan sebagai sesuatu yang berbeda, Contohnya saat penulisan sebuah variable.
+
+```php
+<?php 
+    $nama = "kucing";
+	$Nama = "Kucing";
+	$NAMA = "KUCING";
+```
+
+Penulisan nama berikut berbeda, Meskipun dibaca sama sama nama, Namun artinya berbeda. 
+
+
+
+Apa itu Case Insensitive yaitu penulisan yang mengabaikan huruf kapital atau lainya, dan mengaggapnya sama. Beberapa contoh yaitu penulisan `echo`.
+
+```php
+<?php 
+    echo "Kelinci";
+	Echo "Kelinci";
+	eCho "Kelinci";
+	ECho "Kelinci";
+```
+
+Penulisan tersebut akan berarti sama karena memang beberapa fungsi di php mengabaikan case sensitive.
+
+
+
 
 
 ## Mendefinisikan Variable
