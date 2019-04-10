@@ -261,7 +261,38 @@ Array adalah suatu jenis tipe data yang bisa menyiman banyak data (baik dengan t
     $array = [1,2,3,4,5,6];
     $array2 = array(1,2,3,4,5,6);
     $array3 = array('nama' => 'rotan','harga' => 1000);
+	$array4 = ["sapi", 1000, True];
 ```
+
+
+
+Aturan penulisan array bisa menggunkan `[]` atau dengan syntax `array()` diikuti dengan isi dari array tersebut. Array juga bisa mempunyai kunci untuk nilai yang akan didefinisikan. Contohnya pada `$array3` kita asumsikan `$array3` adalah sebuah detail kayu.
+
+Mempunyai kunci yaitu `nama` dan berisi `rotan` selanjutnya mempunyai kunci `harga` dengan isi `1000` . Jika sejak awal tidak didefiniskan kunci dari anggota array itu maka automatis kuncinya akan dimulai dari `0` sampai `n` jumlah arraynya. Dengan contoh `$array` 
+
+
+
+`$array` mempunyai anggota `[1,2,3,4,5,6]` maka kunci pertama dimulai dari `0` atau index ke `0` maka anggotanya adalah `1` maka bisa dipetakan seperti berikut.
+
+0 -> 1
+
+1 -> 2
+
+2 -> 3
+
+dst ..
+
+Contoh berikutnya adalah `$array4` mempunyai isi atau anggota `["sapi", 1000, True]` maka bisa dipecah menurut kunci atau indexnya menjadi seperti berikut.
+
+0 -> "sapi"
+
+1 -> 1000
+
+2 -> True 
+
+
+
+Atau secara gampang bisa dengan rumus `n-1` dimana `n` adalah posisi sebenarnya dari urutan array.
 
 
 
