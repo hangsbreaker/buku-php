@@ -91,6 +91,91 @@ Penulisan tersebut akan berarti sama karena memang beberapa fungsi di php mengab
 
 
 
+# Instalasi PHP pada komputer
+
+Proses instalasi PHP pada komputer sangatlah sederhana dan mudah.  
+
+## Untuk Windows
+
+Pada platform windows banyak aplikasi yang bisa dipakai untuk instalasi PHP. Namun untuk kali kita akan menggunakan *xampp*, Karena selain paling populer juga sangat mudah.
+
+1. Download xampp pada link ini [https://www.apachefriends.org/xampp-files/7.1.27/xampp-windows-x64-7.1.27-1-VC14-installer.exe](https://www.apachefriends.org/xampp-files/7.1.27/xampp-windows-x64-7.1.27-1-VC14-installer.exe)
+
+2. Setelah selesai, Jalankan aplikasinya dan akan mendapatkan pesan seperti ini
+
+![](C:\Users\nikko\Desktop\buku-php\pict\1.png)
+
+klik ok saja.
+
+3. Lalu lakukan koonfigurasi seperti ini.
+
+![](C:\Users\nikko\Desktop\buku-php\pict\2.png)
+
+4. Pilih folder instalasi, Sesuaikan default dengan menaruh pada folder `C:` 
+
+![](C:\Users\nikko\Desktop\buku-php\pict\3.png)
+
+5. Selesai itu tinggal next saja sampai selesai.
+
+
+
+### Melakukan setting environment variable
+
+Environment variable adalah setting untuk windows dimana mengenalkan windows dengan PHP nya, Supaya dapat dijalankan secara langsung pada Command Prompt
+
+1. Buka Command Prompt (CMD) dengan as administrator
+
+2. ketikan perintah berikut
+
+   ```batch
+   setx /M path "%path%;C:\xampp\php"
+   ```
+
+   Pastikan mendapat tulisan `SUCCESS: Specified value was saved.`
+
+3. Tutup Command Promptnya 
+
+4. Buka kembali dan tuliskan `php -v`  dan pastikan mendapatkan output yang mirip dengan ini.
+
+   ```php
+   PHP 7.2.6 (cli) (built: May 23 2018 20:51:04) ( ZTS MSVC15 (Visual C++ 2017) x86 )
+   Copyright (c) 1997-2018 The PHP Group
+   Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+   ```
+
+
+
+
+
+### Menulis program pertamaku
+
+Setelah melakukan instalasi, Mari kita menulis program php pertama kita, Tidak apa apa jika tidak mengerti kode apa yang kalian tulis berikut ini, Kita akan belajar setelah program pertama kalian sudah bisa dijalankan.
+
+
+
+1. Pergi ke *Desktop* 
+2. Buat sebuah file bernama `aku.php`
+3. Buka file `aku.php` pada text editor kalian.
+4. Lalu tuliskan kode berikut ini.
+
+```php
+<?php
+    $nama = "Isi dengan nama kalian";
+    echo "Halo dunia! Aku $nama siap untuk belajar PHP!";
+```
+
+5. Simpan text tersebut.
+6. Lalu buka cmd dengan cara -> tekan logo windows + r
+7. Lalu ketikan cmd
+8. Akan terbuka sebuah command prompt 
+9. Setelah itu ketikan `cd Desktop`
+10. Lalu ketikan `php aku.php`
+11. Lihat outputnya selamat belajar!
+
+
+
+Setelah program pertama kalian sudah jadi. Mari kita belajar dengan detail.
+
 
 
 ## Mendefinisikan Variable
@@ -103,7 +188,7 @@ Tipe data adalah sebuah klasifikasi data menurut jenis data tertentu yang dikena
 
 | Nama   Tipe Data | Pengertian                                                   | Contoh                                            |
 | ---------------- | ------------------------------------------------------------ | ------------------------------------------------- |
-| String           | Adalah semua karakter   pada keyboard                        | [AaBbCcDdEe!@#$%^&*_](mailto:AaBbCcDdEe!@#$%^&*_) |
+| String           | Adalah semua karakter   pada keyboard                        | AaBbCcDdEe!@#$%^&*_ |
 | Integer          | Semua angka tanpa   decimal                                  | 1000,10,1,2,34,5,77,1900                          |
 | Doubles          | Data yang memiliki   titik atau bisa disebut desimal         | 10.1 , 100.222,   3.14                            |
 | Boolean          | Tipe data yang hanya   memiliki isi True/False               | False,True,true,false                             |
@@ -134,6 +219,36 @@ Namun untuk pengenalan basic PHP hanya beberapa tipe data yang digunakan yaitu, 
     $boolean = true; 
     $boolean2 = false;
 ```
+
+
+
+### Format isi variable
+
+Penulisan isi variable juga mempunyai format, Sebagai berikut: 
+
+1. Penulisan isi variable data (Integer / Double / Boolean) tidak menggunakan kutip.
+2. Penulisan String menggunkan kutip dua (`"`) atau bisa juga dengan kutip satu `'` 
+3. Perbedaan kutip satu dan kutip dua adalah, Jika menggunakan kutip satu, tidak bisa dengan menambahakan format `Escape sequance` 
+
+
+
+#### Apa itu Escape sequance
+
+Adalah sebuah urutan karakter yang tidak mewakili dirinya sendiri ketika digunakan atau bahkan mewakili arti lain. Penulisan Escape Sequance diawali dengan garis miring `\` dan dikuti dengan berbagai macam huruf atau angka untuk mewakili arti lain. Berikut ini beberapa contohnya yang sering kita jumpai.
+
+
+
+| Escape   Sequence | Character   Represented |
+| ----------------- | ----------------------- |
+| \n                | New Line   |
+| \r                | Carriage Returm         |
+| \t                | Horizontal Tab          |
+| \v                | Vertical Tab            |
+| \\\            | Backslash               |
+
+
+
+
 
 
 
