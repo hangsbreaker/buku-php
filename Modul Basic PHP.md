@@ -37,9 +37,9 @@ Menulis kode PHP murni bisa menggunakan 3 cara yaitu dengan.
 
 2. Open tag
 
-  ```php
-  <?= .... ?>
-  ```
+   ```php
+   <?= .... ?>
+   ```
 
   Itu adalah tag alternatife yang digunakan dalam keadaan jika kode php butuh hanya 1 line saja, Artinya kode phpnya sangat simple dan pendek.
 
