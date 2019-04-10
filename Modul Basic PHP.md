@@ -248,10 +248,6 @@ Adalah sebuah urutan karakter yang tidak mewakili dirinya sendiri ketika digunak
 
 
 
-
-
-
-
 ## Mendefinisikan Array
 
 Array adalah suatu jenis tipe data yang bisa menyiman banyak data (baik dengan tipe data yang sejenis maupun berbeda) dalam satu wadah/variabel
@@ -298,12 +294,14 @@ Atau secara gampang bisa dengan rumus `n-1` dimana `n` adalah posisi sebenarnya 
 
 ## Membuat Output
 
+Membuat output adalah cara kita menampilkan hasil dari program yang kita tulis pada bentuk visual. Ada 2 cara untuk menampilkan output pada bentuk visual pertama dengan syntax `echo` dan `print` seperti contoh berikut ini.
+
 ### Output pada variable biasa
 
 ```php
 <?php 
-    $nama = "Nikko Enggaliano";
-    echo "Ini adalah sebuah output";
+    $nama = "Nikko Enggaliano\n";
+    echo "Ini adalah sebuah output\n";
     echo $nama;
     echo "Halo nama saya ".$nama;
     print $nama;
@@ -312,20 +310,35 @@ Atau secara gampang bisa dengan rumus `n-1` dimana `n` adalah posisi sebenarnya 
 
 
 
+Lalu apa perbedaanya? tidak ada hanya bentuk kebiasaan saja, Karena dibeberapa pemrograman lain menampilkan output menggunakan `print` namun umumnya pada php menggunakan `echo`.
+
+
+
+Pengunaan `echo` dan `print` cukup sederhana seperti diatas. Bisa untuk membuat output dari sebuah variable atau langsung dengan string yang akan kita tampilkan.
+
+
+
 ### Output pada sebuah array
+
+Membuat output pada array sangat berbeda dengan outpur pada variable biasa atau string langsung.
 
 ```php
 <?php 
     $buah = ['Durian', 'Apel', 'Jeruk'];
     $hewan = array('Ikan', 'Kucing', 'Nyamuk');
-    $hewan2 = array('nama' => 'Ikan', 'harga' => 1000);
 
     print_r($buah);
     print_r($hewan);
-    print_r($hewan2);
+    print_r(array('nama' => 'Ikan', 'harga' => 1000));
 ```
 
+Membuat output pada array menggunakan syntax `print_r` diikuti dengan variable berisi array atau langsung pada arraynya. 
+
+
+
 ### Menampilkan data pada sebuah array dengan menggunakan indeks
+
+Jika menggunakan `print_r` kita mendapatkan semua data dari arraynya, Kita juga bisa mengeluarkan output hanya salah satu anggota dari array tersebut. 
 
 ```php
 <?php 
@@ -340,7 +353,27 @@ Atau secara gampang bisa dengan rumus `n-1` dimana `n` adalah posisi sebenarnya 
 
 
 
+Cara membuat output hanya anggota array dari variable tersebut dengan syntax `[key]` seperti contoh 
+
+`echo $buah[1]` artinya adalah mengeluarkan output pada array `$buah` dengan index atau key `1`. Contoh berikutnya adalah `echo $hewan2['nama']`. Berarti pada array `$hewan2` dikeluarkan output yang mempunyai kunci `nama`.
+
+
+
 ## Built in Function
+
+Built in Function adalah sebuah fungsi yang sudah ada dalam aplikasi atau bahasa pemrograman yang sudah disiapkan untuk end-user atau pemakainya guna mempermudah kebutuhan end-user. Berikut ini ada beberapa contoh fungsi untuk memanipulasi string.
+
+
+
+### Cara menggunakan Built in Function
+
+`function()` terkadang kita cukup menulis fungsinya saja. Tapi ada beberapa fungsi yang memerlukan sebuah parameter. Apa itu parameter? Parameter adalah sebuah inputan untuk fungsi tersebut. Contohnya beberapa yang memerlukan parameter bentuknya akan seperti ini.
+
+1. function()
+2. function($param)
+3. function($param1,$param2)
+
+
 
 ### Manipulasi String
 
@@ -379,13 +412,35 @@ Fungsi ini digunakan untuk melakukan penggantian karakter/kata pada string input
     echo str_replace("saya","kamu",$var);
 ```
 
+Pada `str_replace` ini ada 3 parameter yang diperlukan. Bentuk umumnya akan seperti ini. `str_replace($param1,$param2,$param3);`  Penjelasannya adalah seperti ini.
+
+*$param1* berisi `saya` parameter pertama ini adalah kata yang akan dicari.
+
+$param2 berisi `kamu` parameter kedua ini adalah kata yang akan menganti paramter pertama.
+
+$param3 berisi variable `$var` atau `string saya` paramter ketiga ini adalah sumber datanya atau variable atau stringnya.
+
+
+
+ 
+
 #### str_repeat
+
 Fungsi ini digunakan untuk mengulang karakter pada string inputan
 ```php
 <?php
     $var = "php";
     echo str_repeat($var,5);
 ```
+
+`str_repeat` membutuhkan 2 paramter. 
+
+Parameter pertama berisi dari variable atau stringnya.
+
+Paramater kedua adalah jumlah kata yang ingin diulang dalam integer.
+
+`str_repeat($var, 5)` artinya ingin mengulan variable `$var` sejumlah `5` kali.
+
 
 
 ### Return Value
