@@ -544,6 +544,8 @@ echo date("m:M");
 echo date("y:Y");
 ```
 
+Program itu akan mengeluarkan output `Day-Month-Year` sesuai dengan timezone nya.
+
 ##  Stop Process
 
 Kita dapat memaksa sebuah program berhenti secara paksa, Biasanya membuat berhenti secara paksa untuk proses debuging sebuah program, Yang tujuannya akan dijalankan baris perbaris.
@@ -611,6 +613,10 @@ Berikut ini contoh pengunaanya untuk membandingan nilai 2 variable.
 
 Syarat dalam aturan tersebut adalah `$nilai1 > $nilai2`.  
 
+Jika memenuhi bahwa `$nilai1` lebih besar dari `$nilai2` maka akan mengeluarka output bahwa `$nilai1` lebih besar. 
+
+Jika tidak maka mengeluarkan output `$nilai2` lebih besar.
+
 
 
 #### elseif
@@ -630,9 +636,45 @@ Syarat dalam aturan tersebut adalah `$nilai1 > $nilai2`.
 
 
 
+Elseif adalah sebuah perbandingan 2 syarat atau lebih. Seperti diatas contohnya. Syarat pertama adalah `$nilai1` lebih besar dari `$nilai2`. Syarat kedua adalah `$nilai1` sama besar dengan `$nilai2`.
+
 
 
 ### switch case
+
+Switch case adalah pengecekan dengan syarat tanpa operator, Mirip dengan if else sama sama memiliki output yang berbeda jika tidak bisa memenuhi syarat.
+
+
+
+#### Bentuk dasar switch case
+
+```php
+switch(syarat){
+
+​	case 'pilihan1':
+
+​		kode..
+
+​		break;
+
+​	case 'pilihan2':
+
+​		kode..
+
+​		 break;
+
+​	default:
+
+​		kode..
+
+​		break;
+
+}
+```
+
+Switch case mempunyai pilihan default jika tidak memenuhi syarat apapun.
+
+
 
 ```php
 <?php 
@@ -648,14 +690,49 @@ Syarat dalam aturan tersebut adalah `$nilai1 > $nilai2`.
             echo 'Hmmm';
             break;
     }
-    
 ```
+
+- Dalam kode itu, variable `$buah` berisi `apel` 
+- Switch pada variable buah.
+- Case pertama apakah `$buah` berisi `jeruk`  jika iya akan mengeluarkan output `Enak`
+- Case kedua apakah `$buah` berisi `apel` jika iya akan mengeluarkan output `Lezat`
+- Nilai defaultnya akan mengelurakan output `Hmmm`
 
 
 
 ## Looping
 
+Looping atau perulangan dimana kode yang kita ingin ulang tidak perlu diketikan satu persatu. Ada beberapa teknik perluangan dibawah ini, Digunakan pada kondisi tertentu sesuai kebutuhan.
+
+
+
 ### For Loop
+
+Foor loop merupakan bentuk looping yang memiliki 3 komponen yaitu.
+
+- Awal
+- Akhir
+- Increment / Decrement
+
+
+
+#### Bentuk dasar for loop yaitu.
+
+```php
+for(awal; akhir; i/decrement){
+
+​	kode..
+
+}
+```
+
+Awal berisi dari angka berapa looping dimulai
+
+Akhir berisi sampai angka berapa looping berhenti
+
+I/decrement berisi looping itu maju atau mundur
+
+
 
 ```php
 <?php 
@@ -663,6 +740,12 @@ Syarat dalam aturan tersebut adalah `$nilai1 > $nilai2`.
         echo $i;
     }
 ```
+
+Looping diatas berawal dari 0 berakhir sampai kurang dari 10  dengan increment.
+
+
+
+
 
 #### Reverse loop
 
@@ -673,7 +756,13 @@ Syarat dalam aturan tersebut adalah `$nilai1 > $nilai2`.
     }
 ```
 
+Looping diatas berawal dari 100 sampai dengan lebih dari 0 dengan decrement, Yaitu looping mundur.
+
+
+
 ### For Each
+
+Foreach adalah syntax looping untuk memecah sebuah array.
 
 ```php
 <?php
@@ -682,6 +771,8 @@ Syarat dalam aturan tersebut adalah `$nilai1 > $nilai2`.
         echo $isi." ";
     }
 ```
+
+Kode diatas bermaksud memecah array `$buah` kedalam variable `$isi` sekarang variable `$isi` berisi element dari array `$buah`. 
 
 
 
@@ -695,18 +786,28 @@ Syarat dalam aturan tersebut adalah `$nilai1 > $nilai2`.
     }
 ```
 
+Kode diatas maksudnya adalah memecah array `$hewan` menjadi variable `$isi` dengan tambahan `$key` yaitu kunci dari element array tersebut, Karena tidak didefinisikan sebuah kunci dari array tersebut, Maka isi dari `$key` adalah 0,1,2,N
+
+
+
 
 
 ### While
 
+Berbeda dengan *for* loop perulangan while akan terus terjadi sampai koondisinya sudah terpenuhi.
+
 ```php
-<?php
+<?php 
     $count = 10;
     while($count < 100){
         echo $count;
         $count++;
     }
 ```
+
+Seperti kode di atas syaratnya `$count` kurang dari 100. Sebelum memenuhi kurang dari 100 maka kode akan terus berjalan.
+
+
 
 
 
@@ -721,9 +822,13 @@ Syarat dalam aturan tersebut adalah `$nilai1 > $nilai2`.
     }
 ```
 
+Sama seperti while sebelumya, Kode while diatas akan berjalan mundur.
+
 
 
 ### Do While
+
+Perulangan yang terus terjadi selama kondisi yang ditentukan benar.
 
 ```php
 <?php
@@ -734,11 +839,57 @@ Syarat dalam aturan tersebut adalah `$nilai1 > $nilai2`.
     }while($count > 10);
 ```
 
+Kode diatas akan terus terulang sampai kondisi, `$count` bernilai lebih dari 10
+
+
+
 
 
 
 
 ### Custom function
+
+Membuat fungsi kita sendiri. Selain ada *Built in Function* kita juga bisa membuat fungsi kita sendiri untuk mempermudah kebutuhan kita.
+
+#### Aturan membuat fungsi
+
+Membuat fungsi tanpa parameter.
+
+```php
+<?php 
+    function namafungsi(){
+   	kode.. 
+}
+```
+
+
+
+Membuat fungsi dengan parameter, Paramater pada fungsi tidak terbatas berapa banyakpun.
+
+```php
+<?php 
+    function namafungsi($param1){
+    kode..
+}
+
+function namafungsi($param1,$param2){
+    kode..
+}
+```
+
+
+
+##### Penamaan fungsi
+
+Sama seperti variable penamaan fungsi tidak bisa diawali dengan angka.
+
+Penamaan fungsi memiliki kesaaman aturan dengan variable.
+
+
+
+###### Fungsi tanpa output namun mereturn data
+
+Fungsi tanpa output ini tidak menampilkan output pada saat fungsi dipanggil. Namun mengembalikan nilai yang dapat diolah lagi.
 
 ```php
 <?php
@@ -749,6 +900,14 @@ Syarat dalam aturan tersebut adalah `$nilai1 > $nilai2`.
 
 ```
 
+Seperti kode diatas membuat fungsi menghitung 2 inputan parameter berupa angka, Yang akan mengembalikan nilai hasil penjumlahan parameter tersebut, Dimana data yang dikembalikan dapat diolah lagi menggunkan operasi lain atau operator lain.
+
+
+
+###### Fungsi dengan output
+
+Fungsi dengan output dimana hasil dari fungsi dapat langsung tampil, Tanpa harus meng`echo` terlebih dahulu. Namun data tidak dapat diolah kembali.
+
 ```php
 <?php 
     function kurang($satu,$dua){
@@ -757,3 +916,6 @@ Syarat dalam aturan tersebut adalah `$nilai1 > $nilai2`.
     kurang(100,125);
 ```
 
+
+
+Seperti kode diatas dimana fungsi kurang langsung menampilkan, hasil dari pengurangan 2 parameter inputan.
