@@ -526,12 +526,12 @@ Jika fungsi rand dengan parameter min dan max maka, Nilai acaknya adalah mulai d
 
 #### date_default_timezone_set
 
+Timezone pada php bisa diatur dengan fungsi `date_default_timezone_set` dengan 1 parameter yaitu. `Benua/IbuKota`. Dengan begini system php akan menyesuaikan dengan GMT daerah Jakarta.
+
 ```php
 <?php 
 date_default_timezone_set("Asia/Jakarta");
 ```
-
-
 
 #### date
 
@@ -544,14 +544,9 @@ echo date("m:M");
 echo date("y:Y");
 ```
 
-#### time
+##  Stop Process
 
-```php
-<?php
-    echo time();
-```
-
-### Stop Process
+Kita dapat memaksa sebuah program berhenti secara paksa, Biasanya membuat berhenti secara paksa untuk proses debuging sebuah program, Yang tujuannya akan dijalankan baris perbaris.
 
 #### exit
 
@@ -560,6 +555,8 @@ echo date("y:Y");
     exit;
 ```
 
+Fungsi `exit` akan membuat program berhenti paksa tanpa ada pesan.
+
 #### die
 
 ```php
@@ -567,9 +564,37 @@ echo date("y:Y");
     die('Program berhenti');
 ```
 
-
+Fungsi `die` membuat proses berhenti secara paksa namun bisa dengan custom alert dengan parameter pertama dari `die`
 
 ## if dan else
+
+Perbandingan dalam PHP hampir sama dengan semua perbandingan dalam bahasa pemrograman lain. Perbadingan PHP juga mempunyai operator untuk prosesnya. Berikut ini daftarnya.
+
+
+
+| Operator | Artinya                    |
+| -------- | -------------------------- |
+| >        | Lebih Dari                 |
+| <        | Kurang Dari                |
+| ==       | Sama Dengan                |
+| ===      | Sama Dengan Tipe   Datanya |
+| >=       | Lebih Dari sama   Dengan   |
+| <=       | Kurang Dari Sama   Dengan  |
+| !=       | Tidak Sama Dengan.         |
+
+Aturan dasar if else adalah seperti berikut.
+
+```php
+if(syarat){
+    jika memenuhi syarat
+}else{
+    jika tidak memenuhi syarat
+}
+```
+
+Berikut ini contoh pengunaanya untuk membandingan nilai 2 variable.
+
+
 
 ```php
 <?php
@@ -581,6 +606,10 @@ echo date("y:Y");
         echo $nilai2." Lebih besar!";
     }
 ```
+
+
+
+Syarat dalam aturan tersebut adalah `$nilai1 > $nilai2`.  
 
 
 
@@ -598,6 +627,8 @@ echo date("y:Y");
         echo $nilai2." Lebih besar!";
     }
 ```
+
+
 
 
 
