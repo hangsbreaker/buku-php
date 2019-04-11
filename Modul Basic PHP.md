@@ -180,7 +180,7 @@ Setelah program pertama kalian sudah jadi. Mari kita belajar dengan detail.
 
 ## Mendefinisikan Variable
 
-Variable adalah sebuah tempat untuk menyimpan berbagai tipe data.
+Variable adalah sebuah tempat untuk menyimpan berbagai tipe data. Dan datanya dapat diubah
 
 ### Tipe data
 
@@ -245,6 +245,33 @@ Adalah sebuah urutan karakter yang tidak mewakili dirinya sendiri ketika digunak
 | \t                | Horizontal Tab          |
 | \v                | Vertical Tab            |
 | \\\            | Backslash               |
+
+
+
+## Mendefinisikan Constanta
+
+Constanta adalah sebuah wadah untuk mendefinisikan suatu tipe data namun datanya tidak diubah lagi.
+
+```php
+<?php 
+    define('buah', 'Jeruk');
+	define('hewan', 'Kuda', True);
+echo buah;
+echo hewan;
+echo HEWAN;
+```
+
+
+
+Constanta dapat dipanggil dengan Case Sensitivy maupun Insesitivy. Pendefinisian constanta mempunyai format.
+
+`define(nama,isi,case)` 
+
+`nama` diisi dengan definisi dari constantanya
+
+`isi` disiis dengan isi constantanya
+
+`case` boleh diisi maupun tidak, Jika diisi *True* maka menjadi Case Insensitive begitupun sebaliknya.
 
 
 
@@ -359,6 +386,40 @@ Cara membuat output hanya anggota array dari variable tersebut dengan syntax `[k
 
 
 
+### Input pada PHP Command Line
+
+PHP CLI juga mendukung inputan pada user, Meski tidak sebaik bahasa pemrograman lain, PHP juga bisa membuat inputan CLI yang baik juga.
+
+
+
+```php
+<?php 
+
+echo "Masukan sebuah input: ";
+$ip = fgets(STDIN);
+echo $ip;
+```
+
+
+
+Pada contoh diatas adalah inputan akan disimpan pada `$ip` namun inputan tersebut ketambahan sebuah Escape Sequeance lain yaitu `\n` artinya new line. Untuk menghilangkan `\n` kita menggunakan inputan dengan format seperti ini.
+
+
+
+```php
+<?php 
+
+echo "Masukan sebuah input: ";
+$ip = trim(fgets(STDIN));
+echo $ip;
+```
+
+
+
+Kita bisa menghilangkan `\n` dengan syntax `trim`. 
+
+
+
 ## Built in Function
 
 Built in Function adalah sebuah fungsi yang sudah ada dalam aplikasi atau bahasa pemrograman yang sudah disiapkan untuk end-user atau pemakainya guna mempermudah kebutuhan end-user. Berikut ini ada beberapa contoh fungsi untuk memanipulasi string.
@@ -447,15 +508,21 @@ Paramater kedua adalah jumlah kata yang ingin diulang dalam integer.
 
 #### rand
 
+Fungsi *rand* adalah fungsi untuk mendapatkan nilai acak dari sebuah parameter minimum dan maximum atau tanpa parameter.
+
 ```php
 <?php 
 echo rand();
 ```
 
+Jika fungsi rand tanpa parameter maka outputnya adalah sebuah angka acak dengan nilai yang tidak bisa terkontrol.
+
 ```php
 <?php 
 echo rand(1,100);
 ```
+
+Jika fungsi rand dengan parameter min dan max maka, Nilai acaknya adalah mulai dari min sampai max. Dengan contoh itu, Maka angka acak outputnya antara 1 - 100.
 
 #### date_default_timezone_set
 
