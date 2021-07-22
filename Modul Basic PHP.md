@@ -15,14 +15,14 @@ Apa pun. PHP utamanya berfokus pada pemrosesan sisi server, sehingga Anda dapat 
 ### Tiga area utama yang dijangkau oleh PHP
 
 - Pemrosesan pada sisi server. Ini adalah target utama dan paling tradisional untuk PHP. Namun Anda memerlukan tiga hal untuk membuatnya berfungsi: PHP Parser (modul CGI atau server), server web, dan browser web. Anda perlu menjalankan server web, dengan instalasi PHP yang terhubung. Anda dapat mengakses output program PHP dengan browser web, melihat halaman PHP melalui server. Semua ini dapat berjalan di mesin milik anda jika Anda hanya bereksperimen dengan pemrograman PHP. Lihat bagian instruksi instalasi untuk informasi lebih lanjut.
-- Command Line Scripting. Anda dapat membuat skrip PHP untuk menjalankannya tanpa server atau browser apa pun. Anda hanya perlu parser PHP untuk menggunakannya dengan cara ini. Jenis penggunaan ini sangat ideal untuk skrip yang dieksekusi secara teratur menggunakan cron (di * nix atau Linux) atau Penjadwal Tugas (pada Windows). Skrip ini juga dapat digunakan untuk tugas pemrosesan teks sederhana. 
-- Membuat aplikasi desktop. PHP mungkin bukan bahasa terbaik untuk membuat aplikasi desktop dengan user interface grafis yang indah, tetapi jika Anda mengenal PHP dengan baik, dan ingin menggunakan beberapa fitur cangih PHP di aplikasi sisi klien Anda, Anda juga dapat menggunakan PHP-GTK untuk tulis program semacam itu. Anda juga memiliki kemampuan untuk menulis aplikasi lintas platform dengan cara ini. Namun PHP-GTK adalah ekstensi dari PHP, tidak tersedia di distribusi utama. 
+- Command Line Scripting. Anda dapat membuat skrip PHP untuk menjalankannya tanpa server atau browser apa pun. Anda hanya perlu parser PHP untuk menggunakannya dengan cara ini. Jenis penggunaan ini sangat ideal untuk skrip yang dieksekusi secara teratur menggunakan cron di (* nix atau Linux) atau Penjadwal Tugas (pada Windows). Skrip ini juga dapat digunakan untuk tugas pemrosesan teks sederhana. 
+- Membuat aplikasi desktop. PHP mungkin bukan bahasa terbaik untuk membuat aplikasi desktop dengan user interface grafis yang indah, tetapi jika Anda mengenal PHP dengan baik, dan ingin menggunakan beberapa fitur cangih PHP di aplikasi sisi klien Anda, Anda juga dapat menggunakan PHP-GTK untuk tulis program semacam itu. Anda juga memiliki kemampuan untuk menulis aplikasi lintas platform dengan cara ini. Namun PHP-GTK adalah ekstensi dari PHP, tidak tersedia didistribusi utama. 
 
 ## Aturan menulis kode PHP
 
 Menulis kode PHP memiliki beberapa aturan, Aturan-aturan ini digunakan dan diimplementasikan pada banyak situasi. Berikut ini beberapa aturan peulisan kode PHP.
 
-### Basic syntax tag php
+### Basic syntax tag PHP
 
 #### Menulis kode PHP murni
 
@@ -103,17 +103,17 @@ Pada platform windows banyak aplikasi yang bisa dipakai untuk instalasi PHP. Nam
 
 2. Setelah selesai, Jalankan aplikasinya dan akan mendapatkan pesan seperti ini
 
-![](C:\Users\nikko\Desktop\buku-php\pict\1.png)
+![](./pict/1.png)
 
 klik ok saja.
 
 3. Lalu lakukan koonfigurasi seperti ini.
 
-![](C:\Users\nikko\Desktop\buku-php\pict\2.png)
+![](./pict/2.png)
 
 4. Pilih folder instalasi, Sesuaikan default dengan menaruh pada folder `C:` 
 
-![](C:\Users\nikko\Desktop\buku-php\pict\3.png)
+![](./pict/3.png)
 
 5. Selesai itu tinggal next saja sampai selesai.
 
@@ -121,7 +121,7 @@ klik ok saja.
 
 ### Melakukan setting environment variable
 
-Environment variable adalah setting untuk windows dimana mengenalkan windows dengan PHP nya, Supaya dapat dijalankan secara langsung pada Command Prompt
+Environment variable adalah setting untuk windows di mana mengenalkan windows dengan PHP nya, Supaya dapat dijalankan secara langsung pada Command Prompt
 
 1. Buka Command Prompt (CMD) dengan as administrator
 
@@ -164,6 +164,7 @@ Setelah melakukan instalasi, Mari kita menulis program php pertama kita, Tidak a
     echo "Halo dunia! Aku $nama siap untuk belajar PHP!";
 ```
 
+
 5. Simpan text tersebut.
 6. Lalu buka cmd dengan cara -> tekan logo windows + r
 7. Lalu ketikan cmd
@@ -186,16 +187,16 @@ Variable adalah sebuah tempat untuk menyimpan berbagai tipe data. Dan datanya da
 
 Tipe data adalah sebuah klasifikasi data menurut jenis data tertentu yang dikenal oleh suatu bahasa pemrograman. Berikut contoh tipe data yang dikenal oleh PHP.
 
-| Nama   Tipe Data | Pengertian                                                   | Contoh                                            |
-| ---------------- | ------------------------------------------------------------ | ------------------------------------------------- |
-| String           | Adalah semua karakter   pada keyboard                        | AaBbCcDdEe!@#$%^&*_ |
-| Integer          | Semua angka tanpa   decimal                                  | 1000,10,1,2,34,5,77,1900                          |
-| Doubles          | Data yang memiliki   titik atau bisa disebut desimal         | 10.1 , 100.222,   3.14                            |
-| Boolean          | Tipe data yang hanya   memiliki isi True/False               | False,True,true,false                             |
-| NULL             | Tipe data yang   menyatakan bahwa data itu tidak ada         | -                                                 |
-| Array            | Sekumupulan data yang   sejenis                              | ['sapi','kucing','kuda']                          |
-| Object           | Data pada pemrograman   berbasis object                      | -                                                 |
-| Resources        | Tipe data dari php   saat melakukan handling pada file atau yang lainya | Koneksi DB                                        |
+| Nama   Tipe Data | Pengertian                                                   | Contoh                   |
+| ---------------- | ------------------------------------------------------------ | ------------------------ |
+| String           | Adalah semua karakter pada keyboard                          | AaBbCcDdEe!@#$%^&*_      |
+| Integer          | Semua angka tanpa decimal                                    | 1000,10,1,2,34,5,77,1900 |
+| Doubles          | Data yang memiliki titik atau bisa disebut desimal           | 10.1 , 100.222,   3.14   |
+| Boolean          | Tipe data yang hanya memiliki isi True/False                 | False,True,true,false    |
+| NULL             | Tipe data yang   menyatakan bahwa data itu tidak ada         | -                        |
+| Array            | Sekumupulan data yang sejenis                                | ['sapi','kucing','kuda'] |
+| Object           | Data pada pemrograman berbasis object                        | -                        |
+| Resources        | Tipe data dari php saat melakukan handling pada file atau yang lainya | Koneksi DB               |
 
 Namun untuk pengenalan basic PHP hanya beberapa tipe data yang digunakan yaitu, String,Integer,Double,Boolean,Array selainya tidak akan dipergunakan karena tidak begitu diperlukan.
 
@@ -227,8 +228,26 @@ Namun untuk pengenalan basic PHP hanya beberapa tipe data yang digunakan yaitu, 
 Penulisan isi variable juga mempunyai format, Sebagai berikut: 
 
 1. Penulisan isi variable data (Integer / Double / Boolean) tidak menggunakan kutip.
-2. Penulisan String menggunkan kutip dua (`"`) atau bisa juga dengan kutip satu `'` 
+2. Penulisan String menggunkan kutip dua (`"`) atau bisa juga dengan kutip satu (`'`) 
 3. Perbedaan kutip satu dan kutip dua adalah, Jika menggunakan kutip satu, tidak bisa dengan menambahakan format `Escape sequance` 
+
+
+
+Nilai variable dapat dirubah setelah didefinisikan, jadi nilainya tidak permanent seperti awal didefinisikan, penggunaannya perubahan variable contohnya seperti ini:
+
+
+
+```php
+<?php 
+   	$nama = "Nikko Enggaliano";
+	echo $nama; #Nikko Enggaliano
+	$nama = "Im Nayeon";
+	echo $nama; #Im Nayeon
+```
+
+
+
+Variable `$nama` awalnya berisi `Nikko Enggaliano` namun di bawahnya didefinisikan lagi variable `$nama` dengan isi `Im Nayeon` maka isi variable `$nama` yang sekarang adalah yang terbaru yaitu `Im Nayeon`.
 
 
 
@@ -241,7 +260,7 @@ Adalah sebuah urutan karakter yang tidak mewakili dirinya sendiri ketika digunak
 | Escape   Sequence | Character   Represented |
 | ----------------- | ----------------------- |
 | \n                | New Line   |
-| \r                | Carriage Returm         |
+| \r                | Carriage Return        |
 | \t                | Horizontal Tab          |
 | \v                | Vertical Tab            |
 | \\\            | Backslash               |
@@ -250,7 +269,7 @@ Adalah sebuah urutan karakter yang tidak mewakili dirinya sendiri ketika digunak
 
 ## Mendefinisikan Constanta
 
-Constanta adalah sebuah wadah untuk mendefinisikan suatu tipe data namun datanya tidak diubah lagi.
+Constanta adalah sebuah wadah untuk mendefinisikan suatu tipe data namun datanya tidak diubah lagi, nilainya akan permanent seperti awal didefinisikan. 
 
 ```php
 <?php 
@@ -315,7 +334,7 @@ Contoh berikutnya adalah `$array4` mempunyai isi atau anggota `["sapi", 1000, Tr
 
 
 
-Atau secara gampang bisa dengan rumus `n-1` dimana `n` adalah posisi sebenarnya dari urutan array.
+Atau secara gampang bisa dengan rumus `n-1` di mana `n` adalah posisi sebenarnya dari urutan array.
 
 
 
@@ -337,11 +356,11 @@ Membuat output adalah cara kita menampilkan hasil dari program yang kita tulis p
 
 
 
-Lalu apa perbedaanya? tidak ada hanya bentuk kebiasaan saja, Karena dibeberapa pemrograman lain menampilkan output menggunakan `print` namun umumnya pada php menggunakan `echo`.
+Lalu apa perbedaanya? tidak ada hanya bentuk kebiasaan saja, Karena dibeberapa bahasa pemrograman lain menampilkan output menggunakan `print` namun umumnya pada php menggunakan `echo`.
 
 
 
-Pengunaan `echo` dan `print` cukup sederhana seperti diatas. Bisa untuk membuat output dari sebuah variable atau langsung dengan string yang akan kita tampilkan.
+Penggunaan `echo` dan `print` cukup sederhana seperti di atas. Bisa untuk membuat output dari sebuah variable atau langsung dengan string yang akan kita tampilkan.
 
 
 
@@ -402,7 +421,7 @@ echo $ip;
 
 
 
-Pada contoh diatas adalah inputan akan disimpan pada `$ip` namun inputan tersebut ketambahan sebuah Escape Sequeance lain yaitu `\n` artinya new line. Untuk menghilangkan `\n` kita menggunakan inputan dengan format seperti ini.
+Pada contoh di atas adalah inputan akan disimpan pada `$ip` namun inputan tersebut ketambahan sebuah Escape Sequeance lain yaitu `\n` artinya new line. Untuk menghilangkan `\n` kita menggunakan inputan dengan format seperti ini.
 
 
 
@@ -422,7 +441,7 @@ Kita bisa menghilangkan `\n` dengan syntax `trim`.
 
 ## Built in Function
 
-Built in Function adalah sebuah fungsi yang sudah ada dalam aplikasi atau bahasa pemrograman yang sudah disiapkan untuk end-user atau pemakainya guna mempermudah kebutuhan end-user. Berikut ini ada beberapa contoh fungsi untuk memanipulasi string.
+Built in Function adalah sebuah fungsi yang sudah ada dalam aplikasi atau bahasa pemrograman yang sudah disiapkan untuk end-user atau pemakainya guna mempermudah kebutuhan para penggunanya. Berikut ini ada beberapa contoh fungsi untuk memanipulasi string.
 
 
 
@@ -443,8 +462,8 @@ Fungsi ini digunakan untuk mengubah string inputan menjadi huruf kecil
 ```php
 <?php
     $var = "Nikko Enggaliano";
-    echo strtolower($var);
-    echo strtolower("Nikko Enggaliano");
+    echo strtolower($var); #nikko enggaliano
+    echo strtolower("Im Nayeon"); #im nayeon
 ```
 
 #### strtoupper
@@ -452,8 +471,8 @@ Fungsi ini digunakan untuk mengubah string inputan menjadi huruf besar
 ```php
 <?php
     $var = "Nikko Enggaliano";
-    echo strtoupper($var);
-    echo strtoupper("Nikko Enggaliano");
+    echo strtoupper($var); #NIKKO ENGGALIANO
+    echo strtoupper("Im Nayeon"); #IM NAYEON
 ```
 
 #### strlen
@@ -461,8 +480,8 @@ Fungsi ini digunakan untuk menghitung jumlah karakter dari string inputan
 ```php
 <?php
     $var = "Nikko";
-    echo strlen($var);
-    echo strlen("Nikko Enggaliano");
+    echo strlen($var); #5
+    echo strlen("Nikko Enggaliano"); #16
 ```
 
 #### str_replace
@@ -470,7 +489,7 @@ Fungsi ini digunakan untuk melakukan penggantian karakter/kata pada string input
 ```php
 <?php
     $var = "string saya";
-    echo str_replace("saya","kamu",$var);
+    echo str_replace("saya","kamu",$var); #string kamu
 ```
 
 Pada `str_replace` ini ada 3 parameter yang diperlukan. Bentuk umumnya akan seperti ini. `str_replace($param1,$param2,$param3);`  Penjelasannya adalah seperti ini.
@@ -483,15 +502,13 @@ $param3 berisi variable `$var` atau `string saya` paramter ketiga ini adalah sum
 
 
 
- 
-
 #### str_repeat
 
 Fungsi ini digunakan untuk mengulang karakter pada string inputan
 ```php
 <?php
     $var = "php";
-    echo str_repeat($var,5);
+    echo str_repeat($var,5); #phpphpphpphpphp
 ```
 
 `str_repeat` membutuhkan 2 paramter. 
@@ -500,7 +517,7 @@ Parameter pertama berisi dari variable atau stringnya.
 
 Paramater kedua adalah jumlah kata yang ingin diulang dalam integer.
 
-`str_repeat($var, 5)` artinya ingin mengulan variable `$var` sejumlah `5` kali.
+`str_repeat($var, 5)` artinya ingin mengulang variable `$var` sejumlah `5` kali.
 
 
 
@@ -512,7 +529,7 @@ Fungsi *rand* adalah fungsi untuk mendapatkan nilai acak dari sebuah parameter m
 
 ```php
 <?php 
-echo rand();
+echo rand(); 
 ```
 
 Jika fungsi rand tanpa parameter maka outputnya adalah sebuah angka acak dengan nilai yang tidak bisa terkontrol.
@@ -538,17 +555,17 @@ date_default_timezone_set("Asia/Jakarta");
 ```php
 <?php
 date_default_timezone_set("Asia/Jakarta");
-echo date("d - D - m - M - y - Y");
-echo date("d:D");
-echo date("m:M");
-echo date("y:Y");
+echo date("d - D - m - M - y - Y"); #22 - Thu - 07 - Jul - 21 - 2021
+echo date("d:D"); #22:Thu
+echo date("m:M"); #07:Jul
+echo date("y:Y"); #21:2021
 ```
 
 Program itu akan mengeluarkan output `Day-Month-Year` sesuai dengan timezone nya.
 
 ##  Stop Process
 
-Kita dapat memaksa sebuah program berhenti secara paksa, Biasanya membuat berhenti secara paksa untuk proses debuging sebuah program, Yang tujuannya akan dijalankan baris perbaris.
+Kita dapat memaksa sebuah program berhenti secara paksa, Biasanya membuat berhenti secara paksa untuk proses `debuging` sebuah program, Yang tujuannya akan dijalankan baris perbaris ataupun sengaja diberhentikan untuk tujuan tertentu.
 
 #### exit
 
@@ -570,7 +587,7 @@ Fungsi `die` membuat proses berhenti secara paksa namun bisa dengan custom alert
 
 ## if dan else
 
-Perbandingan dalam PHP hampir sama dengan semua perbandingan dalam bahasa pemrograman lain. Perbadingan PHP juga mempunyai operator untuk prosesnya. Berikut ini daftarnya.
+Perbandingan / Percabangan dalam PHP hampir sama dengan semua perbandingan / percabangan dalam bahasa pemrograman lain. Perbadingan PHP juga mempunyai operator untuk prosesnya. Berikut ini daftarnya: 
 
 
 
@@ -594,9 +611,15 @@ if(syarat){
 }
 ```
 
+Percabangan tanpa `else` 
+
+```php
+if(syarat){
+    syarat terpenuhi
+}
+```
+
 Berikut ini contoh pengunaanya untuk membandingan nilai 2 variable.
-
-
 
 ```php
 <?php
@@ -636,7 +659,7 @@ Jika tidak maka mengeluarkan output `$nilai2` lebih besar.
 
 
 
-Elseif adalah sebuah perbandingan 2 syarat atau lebih. Seperti diatas contohnya. Syarat pertama adalah `$nilai1` lebih besar dari `$nilai2`. Syarat kedua adalah `$nilai1` sama besar dengan `$nilai2`.
+Elseif adalah sebuah perbandingan 2 syarat atau lebih. Seperti di atas contohnya. Syarat pertama adalah `$nilai1` lebih besar dari `$nilai2`. Syarat kedua adalah `$nilai1` sama besar dengan `$nilai2`.
 
 
 
@@ -651,24 +674,17 @@ Switch case adalah pengecekan dengan syarat tanpa operator, Mirip dengan if else
 ```php
 switch(syarat){
 
-​	case 'pilihan1':
+	case 'pilihan1':
+		kode..
+		break;
 
-​		kode..
-
-​		break;
-
-​	case 'pilihan2':
-
-​		kode..
-
-​		 break;
-
-​	default:
-
-​		kode..
-
-​		break;
-
+	case 'pilihan2':
+		kode..
+		break;
+	default:
+		kode..
+		break;
+        
 }
 ```
 
@@ -696,13 +712,13 @@ Switch case mempunyai pilihan default jika tidak memenuhi syarat apapun.
 - Switch pada variable buah.
 - Case pertama apakah `$buah` berisi `jeruk`  jika iya akan mengeluarkan output `Enak`
 - Case kedua apakah `$buah` berisi `apel` jika iya akan mengeluarkan output `Lezat`
-- Nilai defaultnya akan mengelurakan output `Hmmm`
+- Nilai defaultnya atau jika `case` tidak terpenuhi maka akan mengelurakan output `Hmmm`
 
 
 
 ## Looping
 
-Looping atau perulangan dimana kode yang kita ingin ulang tidak perlu diketikan satu persatu. Ada beberapa teknik perluangan dibawah ini, Digunakan pada kondisi tertentu sesuai kebutuhan.
+Looping atau perulangan di mana kode yang kita ingin ulang tidak perlu diketikan satu persatu. Ada beberapa teknik perluangan di bawah ini, Digunakan pada kondisi tertentu sesuai kebutuhan.
 
 
 
@@ -720,9 +736,7 @@ Foor loop merupakan bentuk looping yang memiliki 3 komponen yaitu.
 
 ```php
 for(awal; akhir; i/decrement){
-
-​	kode..
-
+	kode..
 }
 ```
 
@@ -730,7 +744,7 @@ Awal berisi dari angka berapa looping dimulai
 
 Akhir berisi sampai angka berapa looping berhenti
 
-I/decrement berisi looping itu maju atau mundur
+in/decrement berisi looping itu maju atau mundur
 
 
 
@@ -741,7 +755,7 @@ I/decrement berisi looping itu maju atau mundur
     }
 ```
 
-Looping diatas berawal dari 0 berakhir sampai kurang dari 10  dengan increment.
+Looping di atas berawal dari 0 berakhir sampai kurang dari 10  dengan increment.
 
 
 
@@ -756,7 +770,7 @@ Looping diatas berawal dari 0 berakhir sampai kurang dari 10  dengan increment.
     }
 ```
 
-Looping diatas berawal dari 100 sampai dengan lebih dari 0 dengan decrement, Yaitu looping mundur.
+Looping di atas berawal dari 100 sampai dengan lebih dari 0 dengan decrement, Yaitu looping mundur.
 
 
 
@@ -772,7 +786,7 @@ Foreach adalah syntax looping untuk memecah sebuah array.
     }
 ```
 
-Kode diatas bermaksud memecah array `$buah` kedalam variable `$isi` sekarang variable `$isi` berisi element dari array `$buah`. 
+Kode di atas bermaksud memecah array `$buah` kedalam variable `$isi` sekarang variable `$isi` berisi tiap-tiap element dari array `$buah`. 
 
 
 
@@ -786,9 +800,7 @@ Kode diatas bermaksud memecah array `$buah` kedalam variable `$isi` sekarang var
     }
 ```
 
-Kode diatas maksudnya adalah memecah array `$hewan` menjadi variable `$isi` dengan tambahan `$key` yaitu kunci dari element array tersebut, Karena tidak didefinisikan sebuah kunci dari array tersebut, Maka isi dari `$key` adalah 0,1,2,N
-
-
+Kode di atas maksudnya adalah memecah array `$hewan` menjadi variable `$isi` dengan tambahan `$key` yaitu kunci dari element array tersebut, Karena tidak didefinisikan sebuah kunci dari array tersebut, Maka isi dari `$key` adalah urutan index mulai dari 0,1,2,N
 
 
 
@@ -809,8 +821,6 @@ Seperti kode di atas syaratnya `$count` kurang dari 100. Sebelum memenuhi kurang
 
 
 
-
-
 #### Reverse while
 
 ```php
@@ -822,7 +832,7 @@ Seperti kode di atas syaratnya `$count` kurang dari 100. Sebelum memenuhi kurang
     }
 ```
 
-Sama seperti while sebelumya, Kode while diatas akan berjalan mundur.
+Sama seperti while sebelumya, Kode while di atas akan berjalan mundur.
 
 
 
@@ -839,11 +849,7 @@ Perulangan yang terus terjadi selama kondisi yang ditentukan benar.
     }while($count > 10);
 ```
 
-Kode diatas akan terus terulang sampai kondisi, `$count` bernilai lebih dari 10
-
-
-
-
+Kode di atas akan terus terulang sampai kondisi, `$count` bernilai lebih dari 10
 
 
 
@@ -889,24 +895,25 @@ Penamaan fungsi memiliki kesaaman aturan dengan variable.
 
 ###### Fungsi tanpa output namun mereturn data
 
-Fungsi tanpa output ini tidak menampilkan output pada saat fungsi dipanggil. Namun mengembalikan nilai yang dapat diolah lagi.
+Fungsi tanpa output ini tidak menampilkan output pada saat fungsi dipanggil. Namun mengembalikan nilai yang dapat diolah lagi, atau yang nilai fungsinya dapat dimasukan ke dalam sebuah variable
 
 ```php
 <?php
     function tambah($satu,$dua){
         return ($satu+$dua);
     }
+	$hasil = tambah(100,100);
     echo tambah(10,10);
 
 ```
 
-Seperti kode diatas membuat fungsi menghitung 2 inputan parameter berupa angka, Yang akan mengembalikan nilai hasil penjumlahan parameter tersebut, Dimana data yang dikembalikan dapat diolah lagi menggunkan operasi lain atau operator lain.
+Seperti kode di atas membuat fungsi menghitung 2 inputan parameter berupa angka, Yang akan mengembalikan nilai hasil penjumlahan parameter tersebut, di mana data yang dikembalikan dapat diolah lagi menggunkan operasi lain atau operator lain.
 
 
 
 ###### Fungsi dengan output
 
-Fungsi dengan output dimana hasil dari fungsi dapat langsung tampil, Tanpa harus meng`echo` terlebih dahulu. Namun data tidak dapat diolah kembali.
+Fungsi dengan output di mana hasil dari fungsi dapat langsung tampil, Tanpa harus meng`echo` terlebih dahulu. Namun data tidak dapat diolah kembali.
 
 ```php
 <?php 
@@ -918,4 +925,22 @@ Fungsi dengan output dimana hasil dari fungsi dapat langsung tampil, Tanpa harus
 
 
 
-Seperti kode diatas dimana fungsi kurang langsung menampilkan, hasil dari pengurangan 2 parameter inputan.
+Seperti kode di atas, di mana fungsi kurang langsung menampilkan, hasil dari pengurangan 2 parameter inputan.
+
+
+
+###### Fungsi dengan parameter default
+
+Saat membuat fungsi, terkadang kita ingin memberikan nilai *default* pada suatu parameter berikut ini contohnya
+
+```php
+<?php 
+    function SalamSapa($kondisi="pagi",$nama){
+    	echo "Halo Selamat ".$kondisi." bagaimana harimu ".$nama;
+	}
+
+	SalamSapa("Nikko");
+	SalamSapa("Malam", "Nikko");
+```
+
+Pada contoh di atas, fungsi `SalamSapa` sebenarnya ada 2 parameter pertama adalah `$kondisi` yang mana menerima kondisi keadaan bisa `pagi / siang / malam` yang kedua adalah `$nama` adalah nama seseorang yang ingin disapa. Namun di parameter `$kondisi` sudah ditetapkan yaitu nilainnya adalah `$kondisi="pagi"` yang mana jika parameter pertama tidak diisi maka nilai `$kondisi` sudah automatis terisi sebagai `pagi`. Namun jika ingin tetap mengisi maka konsepnya sama seperti yang sebelumnya.
